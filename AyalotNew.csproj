@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AAA278E0-C05F-4202-B3D0-6D83F96278A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AyalotNew</RootNamespace>
+    <AssemblyName>AyalotNew</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\AyalotDB.mdf" />
+    <Content Include="App_Data\AyalotDB_log.ldf">
+      <DependentUpon>AyalotDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="html\Add_Customers5.aspx" />
+    <Content Include="html\assets\css\jquery-ui.css" />
+    <Content Include="html\assets\font\fontawesome-webfont.eot" />
+    <Content Include="html\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="html\assets\font\fontawesome-webfont.woff" />
+    <Content Include="html\assets\font\FontAwesome.otf" />
+    <Content Include="html\assets\font\glyphicons-halflings-regular.eot" />
+    <Content Include="html\assets\font\glyphicons-halflings-regular.ttf" />
+    <Content Include="html\assets\font\glyphicons-halflings-regular.woff" />
+    <Content Include="html\assets\img\blog\Thumbs.db" />
+    <Content Include="html\assets\img\blog\thumbs\Thumbs.db" />
+    <Content Include="html\assets\img\fillers\Thumbs.db" />
+    <Content Include="html\assets\img\frontpage\image10.jpg" />
+    <Content Include="html\assets\img\frontpage\image11.jpg" />
+    <Content Include="html\assets\img\frontpage\Thumbs.db" />
+    <Content Include="html\assets\img\portfolio\Thumbs.db" />
+    <Content Include="html\assets\img\profiles\Thumbs.db" />
+    <Content Include="html\assets\img\slideshow\Thumbs.db" />
+    <Content Include="html\assets\img\slimbox\Thumbs.db" />
+    <Content Include="html\assets\img\social_icons\Thumbs.db" />
+    <Content Include="html\assets\img\theteam\Thumbs.db" />
+    <Content Include="html\assets\img\Thumbs.db" />
+    <Content Include="html\assets\img\thumbsgallery\Thumbs.db" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\Thumbs.db" />
+    <Content Include="html\assets\img\typo\Thumbs.db" />
+    <Content Include="html\assets\js\jquery-1.9.1.js" />
+    <Content Include="html\assets\js\jquery-ui.js" />
+    <Content Include="html\assets\js\jquery.ui.datepicker-he.js" />
+    <Content Include="html\assets\less\accordions.less" />
+    <Content Include="html\assets\less\blockquotes.less" />
+    <Content Include="html\assets\less\blog.less" />
+    <Content Include="html\assets\less\bootstrap.less" />
+    <Content Include="html\assets\less\bootstrap\alerts.less" />
+    <Content Include="html\assets\less\bootstrap\badges.less" />
+    <Content Include="html\assets\less\bootstrap\bootstrap.less" />
+    <Content Include="html\assets\less\bootstrap\breadcrumbs.less" />
+    <Content Include="html\assets\less\bootstrap\button-groups.less" />
+    <Content Include="html\assets\less\bootstrap\buttons.less" />
+    <Content Include="html\assets\less\bootstrap\carousel.less" />
+    <Content Include="html\assets\less\bootstrap\close.less" />
+    <Content Include="html\assets\less\bootstrap\code.less" />
+    <Content Include="html\assets\less\bootstrap\component-animations.less" />
+    <Content Include="html\assets\less\bootstrap\dropdowns.less" />
+    <Content Include="html\assets\less\bootstrap\forms.less" />
+    <Content Include="html\assets\less\bootstrap\glyphicons.less" />
+    <Content Include="html\assets\less\bootstrap\grid.less" />
+    <Content Include="html\assets\less\bootstrap\input-groups.less" />
+    <Content Include="html\assets\less\bootstrap\jumbotron.less" />
+    <Content Include="html\assets\less\bootstrap\labels.less" />
+    <Content Include="html\assets\less\bootstrap\list-group.less" />
+    <Content Include="html\assets\less\bootstrap\media.less" />
+    <Content Include="html\assets\less\bootstrap\mixins.less" />
+    <Content Include="html\assets\less\bootstrap\modals.less" />
+    <Content Include="html\assets\less\bootstrap\navbar.less" />
+    <Content Include="html\assets\less\bootstrap\navs.less" />
+    <Content Include="html\assets\less\bootstrap\normalize.less" />
+    <Content Include="html\assets\less\bootstrap\pager.less" />
+    <Content Include="html\assets\less\bootstrap\pagination.less" />
+    <Content Include="html\assets\less\bootstrap\panels.less" />
+    <Content Include="html\assets\less\bootstrap\popovers.less" />
+    <Content Include="html\assets\less\bootstrap\print.less" />
+    <Content Include="html\assets\less\bootstrap\progress-bars.less" />
+    <Content Include="html\assets\less\bootstrap\responsive-utilities.less" />
+    <Content Include="html\assets\less\bootstrap\scaffolding.less" />
+    <Content Include="html\assets\less\bootstrap\tables.less" />
+    <Content Include="html\assets\less\bootstrap\theme.less" />
+    <Content Include="html\assets\less\bootstrap\thumbnails.less" />
+    <Content Include="html\assets\less\bootstrap\tooltip.less" />
+    <Content Include="html\assets\less\bootstrap\type.less" />
+    <Content Include="html\assets\less\bootstrap\utilities.less" />
+    <Content Include="html\assets\less\bootstrap\wells.less" />
+    <Content Include="html\assets\less\carousels.less" />
+    <Content Include="html\assets\less\font-awesome.less" />
+    <Content Include="html\assets\less\glyphicons.less" />
+    <Content Include="html\assets\less\hornav.less" />
+    <Content Include="html\assets\less\mixins.less" />
+    <Content Include="html\assets\less\nexus.less" />
+    <Content Include="html\assets\less\pages.less" />
+    <Content Include="html\assets\less\panels.less" />
+    <Content Include="html\assets\less\portfolio.less" />
+    <Content Include="html\assets\less\progress-bars.less" />
+    <Content Include="html\assets\less\responsive-nav.less" />
+    <Content Include="html\assets\less\sidebar-menu.less" />
+    <Content Include="html\assets\less\social-icons.less" />
+    <Content Include="html\assets\less\tabs.less" />
+    <Content Include="html\assets\less\template.less" />
+    <Content Include="html\assets\less\testimonials.less" />
+    <Content Include="html\assets\less\thumbs-gallery.less" />
+    <Content Include="html\assets\less\typo.less" />
+    <Content Include="html\assets\less\utility-classes.less" />
+    <Content Include="html\assets\less\variables.less" />
+    <Content Include="html\assets\לוח שנה.html" />
+    <Content Include="html\AyalotMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html\Add_Customer5.html" />
+    <Content Include="html\assets\css\animate.css" />
+    <Content Include="html\assets\css\bootstrap.css" />
+    <Content Include="html\assets\css\custom.css" />
+    <Content Include="html\assets\css\font-awesome.css" />
+    <Content Include="html\assets\css\nexus.css" />
+    <Content Include="html\assets\css\responsive.css" />
+    <Content Include="html\assets\font\features-testimonials.html" />
+    <Content Include="html\assets\font\fontawesome-webfont.svg" />
+    <Content Include="html\assets\font\glyphicons-halflings-regular.svg" />
+    <Content Include="html\assets\img\background.jpg" />
+    <Content Include="html\assets\img\blog\image1.jpg" />
+    <Content Include="html\assets\img\blog\image2.jpg" />
+    <Content Include="html\assets\img\blog\image3.jpg" />
+    <Content Include="html\assets\img\blog\image4.jpg" />
+    <Content Include="html\assets\img\blog\thumbs\thumb1.jpg" />
+    <Content Include="html\assets\img\blog\thumbs\thumb2.jpg" />
+    <Content Include="html\assets\img\blog\thumbs\thumb3.jpg" />
+    <Content Include="html\assets\img\blog\thumbs\thumb4.jpg" />
+    <Content Include="html\assets\img\fillers\aboutme.jpg" />
+    <Content Include="html\assets\img\fillers\filler1.jpg" />
+    <Content Include="html\assets\img\fillers\filler2.jpg" />
+    <Content Include="html\assets\img\fillers\filler3.jpg" />
+    <Content Include="html\assets\img\fillers\filler4.jpg" />
+    <Content Include="html\assets\img\frontpage\image1.jpg" />
+    <Content Include="html\assets\img\frontpage\image2.jpg" />
+    <Content Include="html\assets\img\frontpage\image3.jpg" />
+    <Content Include="html\assets\img\frontpage\image4.jpg" />
+    <Content Include="html\assets\img\frontpage\image5.jpg" />
+    <Content Include="html\assets\img\frontpage\image6.jpg" />
+    <Content Include="html\assets\img\frontpage\image7.jpg" />
+    <Content Include="html\assets\img\frontpage\image8.jpg" />
+    <Content Include="html\assets\img\frontpage\image9.jpg" />
+    <Content Include="html\assets\img\header_bg.jpg" />
+    <Content Include="html\assets\img\hr.png" />
+    <Content Include="html\assets\img\logo.png" />
+    <Content Include="html\assets\img\menu_arrow.png" />
+    <Content Include="html\assets\img\parallax-bg1.jpg" />
+    <Content Include="html\assets\img\parallax-bg2.jpg" />
+    <Content Include="html\assets\img\parallax-bg3.jpg" />
+    <Content Include="html\assets\img\portfolio\image1.jpg" />
+    <Content Include="html\assets\img\portfolio\image10.jpg" />
+    <Content Include="html\assets\img\portfolio\image11.jpg" />
+    <Content Include="html\assets\img\portfolio\image12.jpg" />
+    <Content Include="html\assets\img\portfolio\image2.jpg" />
+    <Content Include="html\assets\img\portfolio\image3.jpg" />
+    <Content Include="html\assets\img\portfolio\image4.jpg" />
+    <Content Include="html\assets\img\portfolio\image5.jpg" />
+    <Content Include="html\assets\img\portfolio\image6.jpg" />
+    <Content Include="html\assets\img\portfolio\image7.jpg" />
+    <Content Include="html\assets\img\portfolio\image8.jpg" />
+    <Content Include="html\assets\img\portfolio\image9.jpg" />
+    <Content Include="html\assets\img\profiles\37.jpg" />
+    <Content Include="html\assets\img\profiles\53.jpg" />
+    <Content Include="html\assets\img\profiles\78.jpg" />
+    <Content Include="html\assets\img\profiles\84.jpg" />
+    <Content Include="html\assets\img\profiles\87.jpg" />
+    <Content Include="html\assets\img\profiles\99.jpg" />
+    <Content Include="html\assets\img\responsive_homepage.jpg" />
+    <Content Include="html\assets\img\slideshow\slide1.jpg" />
+    <Content Include="html\assets\img\slideshow\slide2.jpg" />
+    <Content Include="html\assets\img\slideshow\slide3.jpg" />
+    <Content Include="html\assets\img\slideshow\slide4.jpg" />
+    <Content Include="html\assets\img\slimbox\closelabel.gif" />
+    <Content Include="html\assets\img\slimbox\loading.gif" />
+    <Content Include="html\assets\img\slimbox\nextlabel.gif" />
+    <Content Include="html\assets\img\slimbox\prevlabel.gif" />
+    <Content Include="html\assets\img\social_icons\aim.png" />
+    <Content Include="html\assets\img\social_icons\apple.png" />
+    <Content Include="html\assets\img\social_icons\behance.png" />
+    <Content Include="html\assets\img\social_icons\blogger.png" />
+    <Content Include="html\assets\img\social_icons\cargo.png" />
+    <Content Include="html\assets\img\social_icons\delicious.png" />
+    <Content Include="html\assets\img\social_icons\deviantart.png" />
+    <Content Include="html\assets\img\social_icons\digg.png" />
+    <Content Include="html\assets\img\social_icons\dopplr.png" />
+    <Content Include="html\assets\img\social_icons\dribbble.png" />
+    <Content Include="html\assets\img\social_icons\email.png" />
+    <Content Include="html\assets\img\social_icons\ember.png" />
+    <Content Include="html\assets\img\social_icons\evernote.png" />
+    <Content Include="html\assets\img\social_icons\facebook.png" />
+    <Content Include="html\assets\img\social_icons\flickr.png" />
+    <Content Include="html\assets\img\social_icons\forrst.png" />
+    <Content Include="html\assets\img\social_icons\github.png" />
+    <Content Include="html\assets\img\social_icons\google.png" />
+    <Content Include="html\assets\img\social_icons\googleplus.png" />
+    <Content Include="html\assets\img\social_icons\gowalla.png" />
+    <Content Include="html\assets\img\social_icons\grooveshark.png" />
+    <Content Include="html\assets\img\social_icons\html5.png" />
+    <Content Include="html\assets\img\social_icons\icloud.png" />
+    <Content Include="html\assets\img\social_icons\lastfm.png" />
+    <Content Include="html\assets\img\social_icons\linkedin.png" />
+    <Content Include="html\assets\img\social_icons\metacafe.png" />
+    <Content Include="html\assets\img\social_icons\mixx.png" />
+    <Content Include="html\assets\img\social_icons\myspace.png" />
+    <Content Include="html\assets\img\social_icons\netvibes.png" />
+    <Content Include="html\assets\img\social_icons\newsvine.png" />
+    <Content Include="html\assets\img\social_icons\orkut.png" />
+    <Content Include="html\assets\img\social_icons\paypal.png" />
+    <Content Include="html\assets\img\social_icons\picasa.png" />
+    <Content Include="html\assets\img\social_icons\pinterest.png" />
+    <Content Include="html\assets\img\social_icons\plurk.png" />
+    <Content Include="html\assets\img\social_icons\posterous.png" />
+    <Content Include="html\assets\img\social_icons\reddit.png" />
+    <Content Include="html\assets\img\social_icons\rss.png" />
+    <Content Include="html\assets\img\social_icons\skype.png" />
+    <Content Include="html\assets\img\social_icons\stumbleupon.png" />
+    <Content Include="html\assets\img\social_icons\technorati.png" />
+    <Content Include="html\assets\img\social_icons\tumblr.png" />
+    <Content Include="html\assets\img\social_icons\twitter.png" />
+    <Content Include="html\assets\img\social_icons\vimeo.png" />
+    <Content Include="html\assets\img\social_icons\wordpress.png" />
+    <Content Include="html\assets\img\social_icons\yahoo.png" />
+    <Content Include="html\assets\img\social_icons\yelp.png" />
+    <Content Include="html\assets\img\social_icons\youtube.png" />
+    <Content Include="html\assets\img\social_icons\zerply.png" />
+    <Content Include="html\assets\img\social_icons\zootool.png" />
+    <Content Include="html\assets\img\theteam\image1.jpg" />
+    <Content Include="html\assets\img\theteam\image2.jpg" />
+    <Content Include="html\assets\img\theteam\image3.jpg" />
+    <Content Include="html\assets\img\theteam\image4.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image01.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image02.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image03.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image04.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image05.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image06.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image07.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image08.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\image09.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image01.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image02.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image03.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image04.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image05.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image06.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image07.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image08.jpg" />
+    <Content Include="html\assets\img\thumbsgallery\thumbs\image09.jpg" />
+    <Content Include="html\assets\img\typo\attach.png" />
+    <Content Include="html\assets\img\typo\clip.png" />
+    <Content Include="html\assets\img\typo\down.png" />
+    <Content Include="html\assets\img\typo\left_quote.png" />
+    <Content Include="html\assets\img\typo\note.png" />
+    <Content Include="html\assets\img\typo\plus.png" />
+    <Content Include="html\assets\img\typo\right_quote.png" />
+    <Content Include="html\assets\img\typo\sampleimage.jpg" />
+    <Content Include="html\assets\img\typo\star.png" />
+    <Content Include="html\assets\img\typo\tick.png" />
+    <Content Include="html\assets\js\bootstrap.min.js" />
+    <Content Include="html\assets\js\jquery.isotope.js" />
+    <Content Include="html\assets\js\jquery.js" />
+    <Content Include="html\assets\js\jquery.min.js" />
+    <Content Include="html\assets\js\jquery.slicknav.js" />
+    <Content Include="html\assets\js\jquery.stellar.js" />
+    <Content Include="html\assets\js\jquery.sticky.js" />
+    <Content Include="html\assets\js\jquery.visible.js" />
+    <Content Include="html\assets\js\modernizr.custom.js" />
+    <Content Include="html\assets\js\modernizr.js" />
+    <Content Include="html\assets\js\scripts.js" />
+    <Content Include="html\assets\js\slimbox2.js" />
+    <Content Include="html\assets\less\bootstrap\bootstrap.css" />
+    <Content Include="html\calendar_org.aspx" />
+    <EmbeddedResource Include="html\calender.aspx" />
+    <Content Include="html\createUser0.aspx" />
+    <Content Include="html\customer3.aspx" />
+    <Content Include="html\customer3.html" />
+    <Content Include="html\Customers_Card.aspx" />
+    <Content Include="html\Customers_list4.aspx" />
+    <Content Include="html\customers_list4.html" />
+    <Content Include="html\Customer_card.html" />
+    <Content Include="html\expir.html" />
+    <Content Include="html\home2.aspx" />
+    <Content Include="html\index.html" />
+    <Content Include="html\login1.aspx" />
+    <Content Include="html\Login1.html" />
+    <Content Include="html\sce2.html" />
+    <Content Include="html\Sceduel9.html" />
+    <Content Include="html\users.aspx" />
+    <Content Include="html\warnning8.aspx" />
+    <Content Include="html\Warnning8.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AyalotBl.cs" />
+    <Compile Include="AyalotDal.cs" />
+    <Compile Include="html\Add_Customers5.aspx.cs">
+      <DependentUpon>Add_Customers5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Add_Customers5.aspx.designer.cs">
+      <DependentUpon>Add_Customers5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\AyalotMaster.Master.cs">
+      <DependentUpon>AyalotMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\AyalotMaster.Master.designer.cs">
+      <DependentUpon>AyalotMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="html\calendar_org.aspx.cs">
+      <DependentUpon>calendar_org.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\calendar_org.aspx.designer.cs">
+      <DependentUpon>calendar_org.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\calender.aspx.cs">
+      <DependentUpon>calender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\calender.aspx.designer.cs">
+      <DependentUpon>calender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\createUser0.aspx.cs">
+      <DependentUpon>createUser0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\createUser0.aspx.designer.cs">
+      <DependentUpon>createUser0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\customer3.aspx.cs">
+      <DependentUpon>customer3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\customer3.aspx.designer.cs">
+      <DependentUpon>customer3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\Customers_Card.aspx.cs">
+      <DependentUpon>Customers_Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Customers_Card.aspx.designer.cs">
+      <DependentUpon>Customers_Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\Customers_list4.aspx.cs">
+      <DependentUpon>Customers_list4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Customers_list4.aspx.designer.cs">
+      <DependentUpon>Customers_list4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\home2.aspx.cs">
+      <DependentUpon>home2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\home2.aspx.designer.cs">
+      <DependentUpon>home2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\login1.aspx.cs">
+      <DependentUpon>login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\login1.aspx.designer.cs">
+      <DependentUpon>login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\warnning8.aspx.cs">
+      <DependentUpon>warnning8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\warnning8.aspx.designer.cs">
+      <DependentUpon>warnning8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35191</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:35191/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
